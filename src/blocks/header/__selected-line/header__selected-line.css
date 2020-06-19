@@ -1,0 +1,28 @@
+.header__selected-line {
+  width: 100%;
+  height: 3px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: -29px;
+  left: 0;
+  background-color: #fff;
+}
+
+@media screen and (max-width: 1024px) {
+  .header__selected-line {
+    bottom: -22px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header__selected-line {
+    bottom: -17px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .header__selected-line {
+    display: none;
+  }
+}

@@ -1,0 +1,56 @@
+.header__button {
+  height: 48px;
+  margin: 0;
+  padding: 0 12px;
+  background: none;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  border-radius: 100px;
+  font-family: Roboto, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+}
+
+.header__button:hover {
+  animation: pulsation 1s ease-in-out infinite alternate;
+}
+
+.header__button:active {
+  animation: none;
+  border: 1px solid #0c2d66;
+  color: #0c2d66;
+}
+
+@media screen and (max-width: 1024px) {
+  .header__button {
+    height: 40px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header__button {
+    margin: 22px 0 0;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .header__button {
+    width: 100%;
+  }
+}
+
+@keyframes pulsation {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}

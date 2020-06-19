@@ -1,0 +1,22 @@
+.popup__enter-button {
+  margin: 14px 0 0;
+  padding: 0;
+  align-self: start;
+  border: none;
+  background: transparent;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  color: #2F71E5;
+  cursor: pointer;
+  outline: none;
+}
+
+.popup__enter-button:hover {
+  color: #347EFF;
+}
+
+.popup__enter-button:focus {
+  color: #2A65CC;
+}

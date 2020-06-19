@@ -1,0 +1,27 @@
+.results__content {
+  max-width: 1440px;
+  width: 100%;
+  padding: 80px 104px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 1024px) {
+  .results__content {
+    max-width: 100%;
+    padding: 40px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .results__content {
+    padding: 32px 16px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .results__content {
+    max-width: 320px;
+  }
+}

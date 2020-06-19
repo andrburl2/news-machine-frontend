@@ -1,0 +1,16 @@
+@import url(__content/info__content.css);
+@import url(__text/info__text.css);
+@import url(__title/info__title.css);
+@import url(__subtitle/info__subtitle.css);
+@import url(__keywords/info__keywords.css);
+
+.info {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  font-family: Roboto, Arial, sans-serif;
+  color: #1a1b22;
+}

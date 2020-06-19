@@ -1,0 +1,9 @@
+.header__nav_background_white {
+  background-color: #fff;
+}
+
+@media screen and (max-width: 700px) {
+  .header__nav_background_white {
+    border-bottom: 1px solid #d1d2d6;
+  }
+}
