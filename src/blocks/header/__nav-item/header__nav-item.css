@@ -1,0 +1,12 @@
+.header__nav-item {
+  margin: 0 32px 0 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+@media screen and (max-width: 1024px) {
+  .header__nav-item {
+    margin: 0 16px 0 0;
+  }
+}

@@ -1,0 +1,32 @@
+@import url(__keyword/article__keyword.css);
+
+@import url(__button-container/article__button-container.css);
+@import url(__button-container/_direction/article__button-container_direction_column.css);
+
+@import url(__explanation/article__explanation.css);
+@import url(__explanation/_margin/article__explanation_margin_top.css);
+
+@import url(__button/article__button.css);
+@import url(__button/_type/article__button_type_save.css);
+@import url(__button/_type/article__button_type_trash.css);
+@import url(__button/_active/article__button_active.css);
+
+@import url(__img/article__img.css);
+@import url(__text-column/article__text-column.css);
+@import url(__date/article__date.css);
+@import url(__title/article__title.css);
+@import url(__text/article__text.css);
+@import url(__author/article__author.css);
+
+.article {
+  max-width: 400px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 16px;
+  font-family: Roboto Slab, Arial, sans-serif;
+  color: #1a1b22;
+  position: relative;
+}

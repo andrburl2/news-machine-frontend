@@ -1,0 +1,30 @@
+.article__keyword {
+  margin: 0;
+  padding: 8px 12px;
+  background-color: #fff;
+  border-radius: 10px;
+  font-family: Roboto, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  color: #000;
+  position: absolute;
+  top: 24px;
+  left: 24px;
+}
+
+@media screen and (max-width: 1024px) {
+  .article__keyword {
+    top: 8px;
+    left: 8px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .article__keyword {
+    top: 16px;
+    left: 16px;
+  }
+}
