@@ -1,5 +1,5 @@
 export const MAIN_API_DATA = {
-  url: 'https://api.news-machine.tk',
+  url: 'https://api.news-machine.ml',
   headers: {
     'Content-Type': 'application/json'
   },
