@@ -40,12 +40,6 @@
   }
 }
 
-@media screen and (max-width: 375px) {
-  .header__button {
-    width: 100%;
-  }
-}
-
 @keyframes pulsation {
   from {
     transform: scale(1);

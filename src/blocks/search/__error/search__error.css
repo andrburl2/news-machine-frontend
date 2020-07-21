@@ -1,0 +1,14 @@
+.search__error {
+  margin: 5px 0 0 24px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ff0000;
+}
+
+@media screen and (max-width: 500px) {
+  .search__error {
+    margin: 5px 0 0 16px;
+  }
+}

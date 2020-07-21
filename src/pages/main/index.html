@@ -22,13 +22,13 @@
           <div class="header__selected-line"></div>
         </div>
 
-        <div class="header__nav-item">
+        <div class="header__nav-item header__nav-item_link hidden">
           <a href="./articles" class="header__link">Сохранённые статьи</a>
         </div>
 
-        <button class="header__button">Авторизоваться</button>
+        <button class="header__button header__button_type_login">Авторизоваться</button>
 
-        <button class="header__button header__button_type_logout hidden">AndrBurl</button>
+        <button class="header__button header__button_type_logout hidden"></button>
       </nav>
 
       <button class="header__mobile-button"></button>
@@ -42,118 +42,34 @@
         <h2 class="search__title">Что в мире творится?</h2>
         <p class="search__subtitle">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</p>
 
-        <form class="search__form">
-          <input type="text" placeholder="Введите тему новости" class="search__input">
-          <button type="submit" class="search__button">Искать</button>
+        <form name="searchForm" class="search__form">
+          <input name="search" type="text" placeholder="Введите тему новости" class="search__input" minlength="2" maxlength="30" required>
+          <p class="search__error"></p>
+          <button type="submit" class="search__button form__button" disabled>Искать</button>
         </form>
+
       </div>
     </section>
 
     <section class="results">
-      <div class="results__content">
+      <div class="results__content hidden">
         <h2 class="results__title">Результаты поиска</h2>
 
         <div class="results__grid-container">
-
-          <div class="article">
-            <div class="article__button-container">
-              <p class="article__explanation">Войдите, чтобы сохранять статьи</p>
-              <button class="article__button article__button_type_save"></button>
-            </div>
-
-            <img class="article__img" src="<%=require('../../images/results_example.jpg')%>" alt="Обложка статьи">
-
-            <div class="article__text-column">
-              <time datetime="2019-09-02" class="article__date">2 августа, 2019</time>
-              <h3 class="article__title">Национальное достояние – парки</h3>
-              <p class="article__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий,
-                где и сегодня каждый может приобщиться к природе.</p>
-              <p class="article__author">Лента.ру</p>
-            </div>
-          </div>
-
-          <div class="article">
-            <div class="article__button-container">
-              <p class="article__explanation">Войдите, чтобы сохранять статьи</p>
-              <button class="article__button article__button_type_save"></button>
-            </div>
-
-            <img class="article__img" src="<%=require('../../images/results_example.jpg')%>" alt="Обложка статьи">
-
-            <div class="article__text-column">
-              <time datetime="2019-09-02" class="article__date">2 августа, 2019</time>
-              <h3 class="article__title">Национальное достояние – парки</h3>
-              <p class="article__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий,
-                где и сегодня каждый может приобщиться к природе.</p>
-              <p class="article__author">Лента.ру</p>
-            </div>
-          </div>
-
-          <div class="article">
-            <div class="article__button-container">
-              <p class="article__explanation">Войдите, чтобы сохранять статьи</p>
-              <button class="article__button article__button_type_save"></button>
-            </div>
-
-            <img class="article__img" src="<%=require('../../images/results_example.jpg')%>" alt="Обложка статьи">
-
-            <div class="article__text-column">
-              <time datetime="2019-09-02" class="article__date">2 августа, 2019</time>
-              <h3 class="article__title">Национальное достояние – парки</h3>
-              <p class="article__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий,
-                где и сегодня каждый может приобщиться к природе.</p>
-              <p class="article__author">Лента.ру</p>
-            </div>
-          </div>
-
-          <div class="article">
-            <div class="article__button-container">
-              <p class="article__explanation">Войдите, чтобы сохранять статьи</p>
-              <button class="article__button article__button_type_save"></button>
-            </div>
-
-            <img class="article__img" src="<%=require('../../images/results_example.jpg')%>" alt="Обложка статьи">
-
-            <div class="article__text-column">
-              <time datetime="2019-09-02" class="article__date">2 августа, 2019</time>
-              <h3 class="article__title">Национальное достояние – парки</h3>
-              <p class="article__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий,
-                где и сегодня каждый может приобщиться к природе.</p>
-              <p class="article__author">Лента.ру</p>
-            </div>
-          </div>
-
-          <div class="article">
-            <div class="article__button-container">
-              <p class="article__explanation">Войдите, чтобы сохранять статьи</p>
-              <button class="article__button article__button_type_save"></button>
-            </div>
-
-            <img class="article__img" src="<%=require('../../images/results_example.jpg')%>" alt="Обложка статьи">
-
-            <div class="article__text-column">
-              <time datetime="2019-09-02" class="article__date">2 августа, 2019</time>
-              <h3 class="article__title">Национальное достояние – парки</h3>
-              <p class="article__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий,
-                где и сегодня каждый может приобщиться к природе.</p>
-              <p class="article__author">Лента.ру</p>
-            </div>
-          </div>
-
         </div>
 
         <button class="results__button">Показать еще</button>
       </div>
 
       <!-- Прелоудер -->
-      <div class="preloader__container">
+      <div class="preloader__container hidden">
         <i class="preloader"></i>
 
         <p class="preloader__text">Идет поиск новостей...</p>
       </div>
 
       <!-- Не найдено -->
-      <div class="not-found">
+      <div class="not-found hidden">
         <img src="<%=require('../../images/not-found.svg')%>" alt="Ничего не найдено" class="not-found__img">
 
         <h2 class="not-found__title">Ничего не найдено</h2>
@@ -221,18 +137,21 @@
       <form name="signin" class="popup__form">
         <h3 class="popup__input-title">Email</h3>
         <input name="email" class="popup__input" placeholder="Введите почту" type="email" required>
-        <p class="popup__error-text hidden">Неправильный формат email</p>
+        <p class="popup__error-text"></p>
 
         <h3 class="popup__input-title">Пароль</h3>
         <input name="password" class="popup__input" placeholder="Введите пароль" type="password" minlength="6" required>
-        <p class="popup__error-text hidden">Пароль должен состоять как минимум из 6 символов</p>
+        <p class="popup__error-text"></p>
 
-        <button type="submit" class="popup__submit-button popup__submit-button_active">Войти</button>
+        <div class="popup__button-container">
+          <p class="popup__error-text popup__error-text_type_main"></p>
+          <button type="submit" class="popup__submit-button form__button" disabled>Войти</button>
+        </div>
       </form>
 
       <div class="popup__switch">
         <p class="popup__switch-text">или</p>
-        <button class="popup__switch-button">Зарегистрироваться</button>
+        <button class="popup__switch-button popup__switch_target_signup">Зарегистрироваться</button>
       </div>
     </div>
   </div>
@@ -246,22 +165,25 @@
       <form name="signup" class="popup__form">
         <h3 class="popup__input-title">Email</h3>
         <input name="email" class="popup__input" placeholder="Введите почту" type="email" required>
-        <p class="popup__error-text hidden">Неправильный формат email</p>
+        <p class="popup__error-text"></p>
 
         <h3 class="popup__input-title">Пароль</h3>
         <input name="password" class="popup__input" placeholder="Введите пароль" type="password" minlength="6" required>
-        <p class="popup__error-text hidden">Пароль должен состоять как минимум из 6 символов</p>
+        <p class="popup__error-text"></p>
 
         <h3 class="popup__input-title">Имя</h3>
         <input name="name" class="popup__input" placeholder="Введите своё имя" type="text" minlength="2" maxlength="30" required>
-        <p class="popup__error-text hidden">Допустимая длина от 2 до 30 символов</p>
+        <p class="popup__error-text"></p>
 
-        <button type="submit" class="popup__submit-button" disabled>Зарегистрироваться</button>
+        <div class="popup__button-container">
+          <p class="popup__error-text popup__error-text_type_main"></p>
+          <button type="submit" class="popup__submit-button form__button" disabled>Зарегистрироваться</button>
+        </div>
       </form>
 
       <div class="popup__switch">
         <p class="popup__switch-text">или</p>
-        <button class="popup__switch-button">Войти</button>
+        <button class="popup__switch-button popup__switch_target_signin">Войти</button>
       </div>
     </div>
   </div>

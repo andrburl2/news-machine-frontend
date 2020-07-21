@@ -6,3 +6,7 @@
   line-height: 15px;
   color: #ff0000;
 }
+
+.popup__error-text_type_main {
+  text-align: center;
+}

@@ -9,7 +9,7 @@
     padding: 16px;
     box-sizing: border-box;
     justify-content: center;
-    position: fixed;
+    position: absolute;
     top: -100vh;
     right: 0;
     background-color: #1A1B22;

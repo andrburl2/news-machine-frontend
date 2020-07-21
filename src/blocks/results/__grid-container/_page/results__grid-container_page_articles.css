@@ -1,3 +1,7 @@
 .results__grid-container_page_articles {
   margin: 0;
 }
+
+.results__grid-container_page_articles:empty .results__content_page_articles {
+  display: none;
+}

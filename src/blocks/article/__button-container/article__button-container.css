@@ -9,8 +9,16 @@
   display: inline-block;
 }
 
+.article__button-container_logged:hover .article__explanation {
+  display: none;
+}
+
 .article__button-container:hover .article__button_type_save {
   background-image: url(../../../images/save_icon/save_icon_hover.svg);
+}
+
+.article__button-container:hover .article__button_active {
+  background-image: url(../../../images/save_icon/saved_icon.svg);
 }
 
 .article__button-container:hover .article__button_type_trash {
