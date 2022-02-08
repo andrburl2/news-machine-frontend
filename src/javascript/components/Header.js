@@ -14,11 +14,12 @@ export class Header extends BaseComponent {
     this.clearResults = null;
 
     this.render = this.render.bind(this);
+    this.closeMobileNav = this.closeMobileNav.bind(this);
   }
 
   toggleMobileNav() {
     if (this.headerData.headerButton.classList.contains('header__mobile-button_active')) {
-      this._closeMobileNav();
+      this.closeMobileNav();
     } else {
       this._openMobileNav();
     }
@@ -70,11 +71,10 @@ export class Header extends BaseComponent {
         if (this.pageName === 'articles') {
           redirect('../');
         }
-        console.log(err.message);
       })
   }
 
-  _closeMobileNav() {
+  closeMobileNav() {
     const { headerContent, headerNav, headerButton } = this.headerData;
 
     headerContent.classList.remove('header__content_background_black');

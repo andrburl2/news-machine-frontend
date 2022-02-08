@@ -17,29 +17,29 @@ export class NewsCard extends BaseComponent {
 
   create(articleData, keyword) {
     const template = `
-    <div class="article">
-      <p class="article__keyword ${this.pageName === 'main' ? 'hidden' : ''}"></p>
+    <div class='article'>
+      <p class='article__keyword ${this.pageName === 'main' ? 'hidden' : ''}'></p>
 
-      <div class="article__button-container">
-        <p class="article__explanation">${this.pageName === 'main' ? 'Войдите, чтобы сохранять статьи' : 'Убрать из сохранённых'}</p>
-        <button class="article__button ${this.pageName === 'main' ? 'article__button_type_save' : 'article__button_type_trash'}"></button>
+      <div class='article__button-container'>
+        <p class='article__explanation'>${this.pageName === 'main' ? 'Войдите, чтобы сохранять статьи' : 'Убрать из сохранённых'}</p>
+        <button class='article__button ${this.pageName === 'main' ? 'article__button_type_save' : 'article__button_type_trash'}'></button>
       </div>
 
-      <a class="article__link" href="" target="_blank">
-        <img class="article__img" src="" alt="Обложка статьи">
+      <a class='article__link' href='' target='_blank'>
+        <img class='article__img' src='' alt='Обложка статьи'>
 
-        <div class="article__text-column">
-          <p class="article__date"></p>
-          <h3 class="article__title"></h3>
-          <p class="article__text"></p>
-          <p class="article__author"></p>
+        <div class='article__text-column'>
+          <p class='article__date'></p>
+          <h3 class='article__title'></h3>
+          <p class='article__text'></p>
+          <p class='article__author'></p>
         </div>
       </a>
     </div>
     `.trim();
 
-    let createNewTag = document.createElement("div");
-    createNewTag.insertAdjacentHTML("beforeend", template);
+    let createNewTag = document.createElement('div');
+    createNewTag.insertAdjacentHTML('beforeend', template);
     const element = createNewTag.firstChild;
 
     this._setEventListener(element);
@@ -67,13 +67,13 @@ export class NewsCard extends BaseComponent {
       })
   }
 
-  sendReq() {
+  sendReq(event) {
     if (!event.target.classList.contains('article__button_logged')) {
       return
     }
 
-    let button = event.target;
-    let article = event.target.parentNode.parentNode;
+    const button = event.target;
+    const article = event.target.parentNode.parentNode;
 
     if (event.target.classList.contains('article__button_active')) {
       this.deleteArticle(article.id)
@@ -157,7 +157,7 @@ export class NewsCard extends BaseComponent {
   }
 
   _isLogged() {
-    return (document.querySelector('.header__button_type_logout').textContent === '')
+    return document.querySelector('.header__button_type_logout').textContent === ''
   }
 
   _getData(element) {
@@ -185,7 +185,11 @@ export class NewsCard extends BaseComponent {
     element.querySelector('.article__keyword').textContent = keyword;
     element.querySelector('.article__date').textContent = this.pageName === 'main' ? formatDate(data.publishedAt) : data.date;
     element.querySelector('.article__title').textContent = data.title;
-    element.querySelector('.article__text').textContent = this.pageName === 'main' ? data.description : data.text;
+
+    // убираю из текста символы теги, которые часто приходят с новостями
+    const text = this.pageName === 'main' ? data.description : data.text;
+    element.querySelector('.article__text').textContent = text.replace(/<\S+>/gm, '');
+
     element.querySelector('.article__author').textContent = this.pageName === 'main' ? data.source.name : data.source;
   }
 }

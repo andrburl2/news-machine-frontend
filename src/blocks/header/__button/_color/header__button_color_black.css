@@ -1,8 +1,0 @@
-.header__button_color_black {
-  border: 1px solid #1a1b22;
-  color: #1a1b22;
-}
-
-.header__button_color_black::before {
-  background-image: url(../../../../images/logout_icon/logout_icon_black.svg);
-}

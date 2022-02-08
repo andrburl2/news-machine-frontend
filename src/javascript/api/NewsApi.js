@@ -11,21 +11,21 @@ export class NewsApi {
     this.getNews = this.getNews.bind(this);
   }
 
-  getNews(keyword) {
-    return fetch(
+  async getNews(keyword) {
+    const res = await fetch(
       `${this.url}` +
-        `${this.endpoint}?` +
-        `q=${keyword}&` +
-        `from=${getDate(7)}&` +
-        `to=${getDate(0)}&` +
-        `language=${this.language}&` +
-        `pageSize=${this.pageSize}&` +
-        `apiKey=${this.apiKey}`
-    )
-      .then(res => res.json())
-      .then(res => {
-        res.keyword = keyword;
-        return res
-      })
+      `${this.endpoint}?` +
+      `q=${keyword}&` +
+      `from=${getDate(7)}&` +
+      `to=${getDate(0)}&` +
+      `language=${this.language}&` +
+      `pageSize=${this.pageSize}&` +
+      `apiKey=${this.apiKey}`
+    );
+
+    const res_json = await res.json();
+    res_json.keyword = keyword;
+
+    return res_json;
   }
 }

@@ -1,5 +1,5 @@
 export const NEWS_API_DATA = {
-  url: 'https://praktikum.tk/news/v2/',
+  url: 'https://newsapi.org/v2/',
   endpoint: 'everything',
   language: 'ru',
   pageSize: 100,

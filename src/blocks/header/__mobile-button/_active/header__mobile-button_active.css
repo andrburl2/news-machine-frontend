@@ -1,9 +1,0 @@
-.header__mobile-button_active::before {
-  transform: rotate(-45deg);
-  top: 11px;
-}
-
-.header__mobile-button_active::after {
-  transform: rotate(45deg);
-  bottom: 11px;
-}

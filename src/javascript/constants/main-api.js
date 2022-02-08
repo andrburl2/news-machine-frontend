@@ -1,5 +1,5 @@
 export const MAIN_API_DATA = {
-  url: 'https://api.news-machine.ml',
+  url: 'http://localhost:3000',
   headers: {
     'Content-Type': 'application/json'
   },
@@ -7,7 +7,7 @@ export const MAIN_API_DATA = {
     signup: '/signup',
     signin: '/signin',
     logout: '/logout',
-    userData: '/users/me',
+    userData: '/users',
     articles: '/articles'
   }
 }

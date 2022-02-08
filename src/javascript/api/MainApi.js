@@ -13,8 +13,8 @@ export class MainApi {
     this.removeArticle = this.removeArticle.bind(this);
   }
 
-  signup([email, password, name]) {
-    return fetch(`${this.url}${this.path.signup}`, {
+  async signup([email, password, name]) {
+    const res = await fetch(`${this.url}${this.path.signup}`, {
       method: 'POST',
       headers: this.headers,
       credentials: 'include',
@@ -23,12 +23,12 @@ export class MainApi {
         password,
         name
       })
-    })
-      .then(res => res.json());
+    });
+    return await res.json();
   }
 
-  signin([email, password]) {
-    return fetch(`${this.url}${this.path.signin}`, {
+  async signin([email, password]) {
+    const res = await fetch(`${this.url}${this.path.signin}`, {
       method: 'POST',
       headers: this.headers,
       credentials: 'include',
@@ -36,36 +36,36 @@ export class MainApi {
         email,
         password
       })
-    })
-      .then(res => res.json());
+    });
+    return await res.json();
   }
 
-  getUserData() {
-    return fetch(`${this.url}${this.path.userData}`, {
+  async getUserData() {
+    const res = await fetch(`${this.url}${this.path.userData}`, {
       method: 'GET',
       credentials: 'include'
-    })
-      .then(res => res.json());
+    });
+    return await res.json();
   }
 
-  logout() {
-    return fetch(`${this.url}${this.path.logout}`, {
+  async logout() {
+    const res = await fetch(`${this.url}${this.path.logout}`, {
       method: 'POST',
       credentials: 'include'
-    })
-      .then(res => res.json());
+    });
+    return await res.json();
   }
 
-  getArticles() {
-    return fetch(`${this.url}${this.path.articles}`, {
+  async getArticles() {
+    const res = await fetch(`${this.url}${this.path.articles}`, {
       method: 'GET',
       credentials: 'include'
-    })
-      .then(res => res.json());
+    });
+    return await res.json();
   }
 
-  createArticle([keyword, title, text, date, source, link, image]) {
-    return fetch(`${this.url}${this.path.articles}`, {
+  async createArticle([keyword, title, text, date, source, link, image]) {
+    const res = await fetch(`${this.url}${this.path.articles}`, {
       method: 'POST',
       headers: this.headers,
       credentials: 'include',
@@ -78,16 +78,16 @@ export class MainApi {
         link,
         image
       })
-    })
-      .then(res => res.json());
+    });
+    return await res.json();
   }
 
-  removeArticle(id) {
-    return fetch(`${this.url}${this.path.articles}/${id}`, {
+  async removeArticle(id) {
+    const res = await fetch(`${this.url}${this.path.articles}/${id}`, {
       method: 'DELETE',
       headers: this.headers,
       credentials: 'include'
-    })
-      .then(res => res.json());
+    });
+    return await res.json();
   }
 }

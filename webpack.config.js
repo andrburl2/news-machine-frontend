@@ -55,7 +55,7 @@ module.exports = {
       },
       {
         test: /\.(eot|ttf|woff|woff2)$/,
-        loader: 'file-loader?name=./vendor/[name].[ext]&publicPath=../',
+        loader: 'file-loader?name=./fonts/[name].[ext]&publicPath=../',
       }
     ]
   },
