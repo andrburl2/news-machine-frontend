@@ -18,12 +18,13 @@ export class Popup extends BaseComponent {
   }
 
   _resetForm() {
-    this.submitButton.setAttribute("disabled", true);
-    this.submitButton.classList.remove("popup__submit-button_active");
+    this.submitButton.setAttribute('disabled', true);
+    this.submitButton.classList.remove('popup__submit-button_active');
 
-    this.popup.querySelectorAll('.popup__error-text').forEach(el=> {
+    this.popup.querySelectorAll('.popup__error-text').forEach(el => {
       el.textContent = '';
     });
+
     this.form.reset();
   }
 
@@ -41,15 +42,11 @@ export class Popup extends BaseComponent {
     return result
   }
 
-  _renderLoading(isLoading, text) {
-    if (isLoading) {
-      this.submitButton.textContent = "Загрузка...";
-    } else {
-      this.submitButton.textContent = text;
-    }
+  _renderLoading(text = 'Загрузка...') {
+    this.submitButton.textContent = text;
   }
 
-  escClose() {
+  escClose(event) {
     if (event.target.classList.contains('popup') || event.key === 'Escape') {
       this.close();
     }

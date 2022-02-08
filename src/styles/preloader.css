@@ -1,0 +1,37 @@
+.preloader {
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+.preloader__spinner {
+	width: 50px;
+  height: 50px;
+  margin: auto auto 24px;
+  display: block;
+	border: 4px solid #444;
+	border-bottom-color: #888;
+	border-radius: 50%;
+	animation: spin .75s infinite linear;
+}
+
+.preloader__text {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1;
+  color: #b6bcbf;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .preloader {
+    padding: 40px 0;
+  }
+}
+
+@keyframes spin {
+	100% {
+		transform: rotate(360deg);
+	}
+}

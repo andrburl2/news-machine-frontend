@@ -33,6 +33,7 @@ export class NewsCardList extends BaseComponent {
           };
 
           this.resultsContainer.classList.remove('hidden');
+
           res.data.forEach(item => {
             this.newsCardContainer.appendChild(this.newsCardCallback(item, item.keyword));
           });
@@ -40,7 +41,7 @@ export class NewsCardList extends BaseComponent {
       })
   }
 
-  sendReq() {
+  sendReq(event) {
     event.preventDefault();
 
     this.clearResults();
@@ -62,8 +63,7 @@ export class NewsCardList extends BaseComponent {
 
         this._toggleElement(this.resultsContainer, true);
       })
-      .catch((err) => {
-        console.log(err);
+      .catch(err => {
         this._toggleElement(this.notFound, true);
       })
       .finally(() => this._toggleElement(this.preloader, false));

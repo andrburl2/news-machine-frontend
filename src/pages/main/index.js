@@ -52,7 +52,7 @@ const mainApi = new MainApi(MAIN_API_DATA);
 const newsApi = new NewsApi(NEWS_API_DATA);
 
 signinPopup.setHandlers();
-signinPopup.handleCallbacks(mainApi.signin, header.render);
+signinPopup.handleCallbacks(mainApi.signin, header.render, header.closeMobileNav);
 
 signupPopup.setHandlers();
 signupPopup.handleCallbacks(mainApi.signup, successPopup.open);

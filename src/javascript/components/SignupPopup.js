@@ -22,7 +22,7 @@ export class SignupPopup extends Popup {
   submit(event) {
     event.preventDefault();
 
-    this._renderLoading(true, 'Зарегистрироваться');
+    this._renderLoading();
     this.apiCallback(this._getValues())
       .then(res => {
         if (res.status === 201) {
@@ -33,9 +33,9 @@ export class SignupPopup extends Popup {
         }
       })
       .catch(err => {
-        this.popup.querySelector('.popup__button-container').querySelector('.popup__error-text').textContent = err.message;
+        this.popup.querySelector('.popup__error-text_type_main').textContent = err.message;
       })
-      .finally(() => this._renderLoading(false, 'Зарегистрироваться'));
+      .finally(() => this._renderLoading('Зарегистрироваться'));
 
   }
 

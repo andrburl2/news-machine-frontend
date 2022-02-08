@@ -1,0 +1,123 @@
+.search {
+  width: 100%;
+  min-height: 540px;
+  padding: 150px 0 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('../images/lead_background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: Roboto, Arial, sans-serif;
+  color: #fff;
+}
+
+.search__content {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.search__title {
+  margin: 0 0 30px;
+  font-weight: normal;
+  font-size: 60px;
+  line-height: 1;
+}
+
+.search__subtitle {
+  margin: 0 0 40px;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.search__form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.search__input {
+  height: 60px;
+  margin: 0;
+  padding: 0 0 0 20px;
+  background: #fff;
+  border: 2px solid #d1d2d6;
+  box-sizing: border-box;
+  backdrop-filter: blur(10px);
+  border-radius: 100px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1;
+  color: #1a1b22;
+  outline: none;
+}
+.search__input::placeholder {
+  color: #b6bcbf;
+}
+.search__input:hover {
+  border-color:  #2f71e5;
+}
+.search__input:focus {
+  border-color:  #265dbd;
+}
+
+.search__error {
+  margin: 10px 0 0 20px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1;
+  color: #ff0000;
+}
+
+.search__button {
+  max-width: 160px;
+  width: 100%;
+  height: 60px;
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1;
+  text-align: center;
+  color: #b6bcbf;
+  background: #e6e8eb;
+  border: none;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: default;
+  outline: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .search {
+    min-height: 400px;
+    padding: 100px 40px 0;
+  }
+
+  .search__title {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .search {
+    min-height: auto;
+    padding: 100px 16px 40px;
+  }
+
+  .search__input {
+    font-size: 14px;
+  }
+
+  .search__button {
+    max-width: 100%;
+    margin: 10px 0 0;
+    position: relative;
+  }
+}

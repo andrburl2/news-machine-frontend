@@ -15,8 +15,6 @@ export class Validation extends BaseComponent {
   }
 
   resetForm() {
-    console.log(this);
-
     this._disableButton(button);
   }
 
@@ -36,13 +34,13 @@ export class Validation extends BaseComponent {
   _validateInput(event) {
     const errorText = event.target.nextSibling.nextSibling;
 
-    if (event.target.validity.valueMissing) {
+    if (event.target.validity.valueMissing && event.target.name !== 'search') {
       return errorText.textContent = 'Это обязательное поле';
     }
     if (event.target.validity.tooShort) {
       return errorText.textContent = event.target.name === 'password' ?
         'Пароль слишком короткий' :
-        'Должно быть от 2 до 30 символов';
+        'Введите от 2 до 30 символов';
     }
     if (event.target.validity.typeMismatch && event.target.type === 'email') {
       return errorText.textContent = 'Введите валидный email';

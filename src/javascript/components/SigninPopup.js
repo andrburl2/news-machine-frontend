@@ -5,12 +5,14 @@ export class SigninPopup extends Popup {
     super(popupData);
 
     this.apiLoginCallback = null;
-    this.headerCallback = null;
+    this.headerRenderCallback = null;
+    this.headerMobileNavCallback = null;
 
     this.popupData = popupData;
   }
 
   open() {
+    this.headerMobileNavCallback();
     this._open();
   }
 
@@ -22,26 +24,27 @@ export class SigninPopup extends Popup {
   submit(event) {
     event.preventDefault();
 
-    this._renderLoading(true, 'Войти');
+    this._renderLoading();
     this.apiLoginCallback(this._getValues())
       .then(res => {
         if (res.status === 200) {
-          this.headerCallback();
+          this.headerRenderCallback();
           this.close();
         } else {
           throw new Error(res.message)
         }
       })
       .catch(err => {
-        this.popup.querySelector('.popup__button-container').querySelector('.popup__error-text').textContent = err.message;
+        this.popup.querySelector('.popup__error-text_type_main').textContent = err.message;
       })
-      .finally(() => this._renderLoading(false, 'Войти'));
+      .finally(() => this._renderLoading('Войти'));
 
   }
 
-  handleCallbacks(fn1, fn2) {
+  handleCallbacks(fn1, fn2, fn3) {
     this.apiLoginCallback = fn1;
-    this.headerCallback = fn2;
+    this.headerRenderCallback = fn2;
+    this.headerMobileNavCallback = fn3;
   }
 
   setHandlers() {

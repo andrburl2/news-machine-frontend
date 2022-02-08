@@ -29,26 +29,27 @@ export class Info {
   }
 
   setTitle(name, articles) {
-    this.data.infoTitle.textContent = `Добро пожаловать, ${name}. Статей сохранено: ${articles.length}.`;
+    this.data.infoTitle.textContent = `Добро пожаловать, ${name}.`;
+    this.data.infoSubtitle.textContent =`Статей сохранено: ${articles.length}.`;
   }
 
   setKeywords(articles) {
     const sortedKeywords = this._sortKeywords(this._countKeywords(articles));
 
     if (sortedKeywords.length === 0) {
-      this.data.infoSubtitle.textContent = '';
+      this.data.infoText.textContent = '';
     } else if (sortedKeywords.length === 1) {
-      this.data.infoSubtitle.insertAdjacentHTML('beforeEnd', `По ключевым словам: <span class="info__keywords">${sortedKeywords[0][0]}</span>.`);
+      this.data.infoText.insertAdjacentHTML('beforeEnd', `По ключевому слову: <span class='info__keywords'>${sortedKeywords[0][0]}</span>`);
     } else if (sortedKeywords.length === 2) {
-      this.data.infoSubtitle.insertAdjacentHTML('beforeEnd', `По ключевым словам: <span class="info__keywords">${sortedKeywords[0][0]}</span>
-      и <span class="info__keywords">${sortedKeywords[1][0]}</span>.`);
+      this.data.infoText.insertAdjacentHTML('beforeEnd', `По ключевым словам: <span class='info__keywords'>${sortedKeywords[0][0]}</span>
+      и <span class='info__keywords'>${sortedKeywords[1][0]}</span>`);
     } else if (sortedKeywords.length === 3) {
-      this.data.infoSubtitle.insertAdjacentHTML('beforeEnd', `По ключевым словам: <span class="info__keywords">${sortedKeywords[0][0]}</span>,
-      <span class="info__keywords">${sortedKeywords[1][0]}</span> и <span class="info__keywords">${sortedKeywords[2][0]}</span>.`);
+      this.data.infoText.insertAdjacentHTML('beforeEnd', `По ключевым словам: <span class='info__keywords'>${sortedKeywords[0][0]}</span>,
+      <span class='info__keywords'>${sortedKeywords[1][0]}</span> и <span class='info__keywords'>${sortedKeywords[2][0]}</span>`);
     } else {
-      this.data.infoSubtitle.insertAdjacentHTML('beforeEnd', `По ключевым словам: <span class="info__keywords">${sortedKeywords[0][0]}</span>,
-      <span class="info__keywords">${sortedKeywords[1][0]}</span> и <span class="info__keywords">${sortedKeywords[2][0]}
-      </span> и <span class="info__keywords">${sortedKeywords.length - 3} другим</span></p>`);
+      this.data.infoText.insertAdjacentHTML('beforeEnd', `По ключевым словам: <span class='info__keywords'>${sortedKeywords[0][0]}</span>,
+      <span class='info__keywords'>${sortedKeywords[1][0]}</span> и <span class='info__keywords'>${sortedKeywords[2][0]}
+      </span> и <span class='info__keywords'>${sortedKeywords.length - 3} другим</span>`);
     }
   }
 
