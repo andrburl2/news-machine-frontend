@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>NewsMachine - Главная</title>
-  <link rel="stylesheet" href="main/main.47a9f721980b0e1e1224.css">
+  <link rel="stylesheet" href="main/main.9e22126fe8b179feb279.css">
   <link rel="icon" href="./images/favicon.png" sizes="32x32" type="image/png">
 </head>
 
@@ -14,7 +14,7 @@
 
   <header class="header">
     <div class="header__content">
-      <a href="./" class="header__title">NewsMachine</a>
+      <a class="header__title" href="./">NewsMachine</a>
 
       <nav class="header__nav">
         <div class="header__nav-item">
@@ -23,7 +23,7 @@
         </div>
 
         <div class="header__nav-item header__nav-item_link hidden">
-          <a href="./articles" class="header__link">Сохранённые статьи</a>
+          <a class="header__link" href="./articles">Сохранённые статьи</a>
         </div>
 
         <button class="header__button header__button_type_login">Авторизоваться</button>
@@ -42,10 +42,10 @@
         <h2 class="search__title">Что в мире творится?</h2>
         <p class="search__subtitle">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</p>
 
-        <form name="searchForm" class="search__form">
-          <input name="search" type="text" placeholder="Введите тему новости" class="search__input" minlength="2" maxlength="30" required>
+        <form class="search__form" name="searchForm">
+          <input class="search__input" name="search" placeholder="Введите тему новости" type="text" minlength="2" maxlength="30" required>
           <p class="search__error"></p>
-          <button type="submit" class="search__button form__button" disabled>Искать</button>
+          <button class="search__button form__button" type="submit" disabled>Искать</button>
         </form>
 
       </div>
@@ -55,22 +55,21 @@
       <div class="results__content hidden">
         <h2 class="results__title">Результаты поиска</h2>
 
-        <div class="results__grid-container">
-        </div>
+        <div class="results__grid-container"></div>
 
         <button class="results__button">Показать еще</button>
       </div>
 
       <!-- Прелоудер -->
-      <div class="preloader__container hidden">
-        <i class="preloader"></i>
+      <div class="preloader hidden">
+        <i class="preloader__spinner"></i>
 
         <p class="preloader__text">Идет поиск новостей...</p>
       </div>
 
       <!-- Не найдено -->
       <div class="not-found hidden">
-        <img src="./images/not-found.svg" alt="Ничего не найдено" class="not-found__img">
+        <img class="not-found__img" src="./images/not-found.svg" alt="Ничего не найдено">
 
         <h2 class="not-found__title">Ничего не найдено</h2>
         <p class="not-found__text">К сожалению по вашему запросу ничего не найдено.</p>
@@ -80,8 +79,8 @@
     <section class="about">
       <div class="about__content">
         <picture class="about__picture">
-          <source srcset="./images/low.jpg" media="(max-width: 1024px) and (min-width: 600px)">
-          <source srcset="./images/middle.jpg" media="(max-width: 600px)">
+          <source srcset="./images/low.jpg" media="(max-width: 600px)">
+          <source srcset="./images/middle.jpg" media="(max-width: 1024px) and (min-width: 600px)">
 
           <img class="about__picture" src="./images/high.jpg" alt="Автор проекта">
         </picture>
@@ -90,17 +89,21 @@
           <h2 class="about__title">Об авторе</h2>
 
           <p class="about__text">
-            Меня зовут Андрей Бурлаков, я начинающий веб-разработчик. С августа 2019 года я начал обучаться на крусах Яндекс Практикум, а с января 2020 года параллельно с этим работать. К сожалению
-            проработал я всего 3 месяца, но успел получить немного настоящего опыта.
+            Меня зовут Андрей Бурлаков, я начинающий веб-разработчик. Живу рядом с Нижним Новгородом.
+            Закончил курс Яндекс Практикум. В 2020 году параллельно с учебой поработал в небольшой веб-студии.
+            За время работы сверстал интернет-магазин, написал часть скриптов для него и сделал несколько лендингов.
           </p>
           <p class="about__text">
-            Я умею верстать, используя <b>HTML</b> и <b>CSS</b>, адаптируя под разные разрешения страницы, оживляя их CSS-анимациями.
-            С помощью <b>JS</b> пишу внутреннюю логику сайта. <b>Webpack</b>-ом собираю все это вместе, транспилирую и минифицирую код, также контролирую версии проекта <b>git</b>-ом.
-            Я создаю свои сервера на <b>Node.js</b> и <b>Express</b>, работаю с <b>MongoDB</b>.
+            Мне нравится верстать, использую семантические теги в <b>HTML</b>, имею здоровое чувство перфекционизма.<br />
+            В <b>CSS</b> знаю основные свойство, адаптирую страницы и пишу анимации. Понимаю каскадность стилей, позиционирование и поток, псевдоклассы и псевдоэдлементы.<br />
+            Использую чистый <b>JS</b> или фреймворк, в основном <b>React</b>. Применяю стандарты <b>ES2015-2017</b>.<br />
+            Умею настраивать <b>Webpack</b> и <b>Babel</b>. Контролирую версии с помощью <b>git</b>.<br />
+            Бэкенд пишу на <b>Node.js</b> и фреймворке <b>Express</b>, в качестве БД использую <b>MongoDB</b>.<br />
           </p>
           <p class="about__text">
-            Этот проект - совокупность всех моих знаний и умений, которые я получил за время обучения. Вы можете посмотреть его код на github и оценить мои навыки. После окончания обучения я продолжу
-            учиться и буду искать работу. Хочу сказать спасибо Практикуму за помощь во входе в мир IT.
+            Это дипломная работа курса веб-разработчика. Вы можете посмотреть его код на github и оценить мои навыки.
+            Недавно я вернулся из армии, а теперь обновляю и чиню старые проекты, осваиваю новые технологии и тренируюсь.
+            Хочу найти интересную работу и делать классные сайты.
           </p>
         </div>
       </div>
@@ -110,19 +113,34 @@
 
   <footer class="footer">
     <div class="footer__content">
-      <p class=footer__copyright>&copy; 2020 NewsMachine, Powered by News API</p>
+      <p class=footer__copyright>&copy; 2022 NewsMachine, Powered by News API</p>
 
       <nav class="footer__nav">
-        <a href="./" class="footer__link">Главная</a>
-        <a href="https://praktikum.yandex.ru" target="_blank" class="footer__link">Яндекс.Практикум</a>
+        <ul class="footer__links-list">
+          <li class="footer__link-item">
+            <p class="footer__link footer__link_active">Главная</p>
+          </li>
 
-        <ul class="footer__links-row">
           <li class="footer__link-item">
-            <a href="https://github.com/andrburl2" target="_blank" class="footer__icon-link"><img src="./images/github_icon.svg" alt="Github icon" class="footer__img"></a>
+            <a class="footer__link" href="./articles" title="К сохраненным статьям">Сохраненные статьи</a>
           </li>
+
           <li class="footer__link-item">
-            <a href="https://www.facebook.com/andrey.burlakov.779" target="_blank" class="footer__icon-link"><img src="./images/fb_icon.svg" alt="Facebook icon" class="footer__img"></a>
+            <a class="footer__icon-link" href="https://github.com/andrburl2" title="Аккаунт Github" target="_blank">
+              <svg class="footer__img" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#000" d="M10.9998.89473C5.41678.89473.89453 5.42318.89453 11c0 4.4664 2.89697 8.2505 6.91054 9.5904.50247.093.68857-.2171.68857-.4901 0-.2419-.0062-.8747-.01241-1.7183-2.81012.6079-3.40564-1.3523-3.40564-1.3523-.45905-1.1663-1.12281-1.4764-1.12281-1.4764-.91809-.6266.06824-.6142.06824-.6142 1.01115.0745 1.55084 1.0422 1.55084 1.0422.89949 1.5446 2.36348 1.098 2.94039.8374.09305-.6513.35359-1.098.63894-1.3523-2.24561-.2543-4.60288-1.1228-4.60288-4.9937 0-1.10419.39081-2.00368 1.04216-2.71086-.10546-.25434-.45285-1.28409.09925-2.67364 0 0 .84986-.27295 2.7791 1.03596.80644-.22332 1.66868-.33498 2.53098-.34119.8561.00621 1.7245.11787 2.531.34119C15.46 4.81525 16.3099 5.0882 16.3099 5.0882c.5521 1.38955.2047 2.4193.0992 2.67364.6452.70718 1.036 1.60667 1.036 2.71086 0 3.8833-2.3635 4.7332-4.6153 4.9875.3598.3102.6886.9305.6886 1.8734 0 1.3523-.0125 2.4379-.0125 2.7729 0 .273.1799.5831.6948.4839 4.0136-1.3399 6.9044-5.124 6.9044-9.5842 0-5.58302-4.5223-10.11147-10.1053-10.11147z"/>
+              </svg>
+            </a>
           </li>
+
+          <li class="footer__link-item">
+            <a  class="footer__icon-link" href="https://www.facebook.com/andrburl2" title="Аккаунт Facebook" target="_blank">
+              <svg class="footer__img" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#000" d="M18.8958 0H1.10417C.49417 0 0 .49417 0 1.10417V18.8967C0 19.5058.49417 20 1.10417 20h9.57913v-7.745H8.07667V9.23667h2.60663V7.01083c0-2.58333 1.5775-3.99 3.8825-3.99 1.1042 0 2.0525.0825 2.3292.11917v2.7l-1.5983.00083c-1.2534 0-1.4959.59584-1.4959 1.46917v1.9275H16.79l-.3892 3.0183h-2.6V20h5.0967C19.5058 20 20 19.5058 20 18.8958V1.10417C20 .49417 19.5058 0 18.8958 0z"/>
+              </svg>
+            </a>
+          </li>
+
         </ul>
       </nav>
     </div>
@@ -131,22 +149,21 @@
   <!-- Попап входа -->
   <div class="popup popup_type_signin hidden">
     <div class="popup__content">
-      <button class="popup__close-button"></button>
+      <button class="popup__close-button" title="Закрыть окно"></button>
+
       <h2 class="popup__title">Вход</h2>
 
-      <form name="signin" class="popup__form">
+      <form class="popup__form" name="signin">
         <h3 class="popup__input-title">Email</h3>
-        <input name="email" class="popup__input" placeholder="Введите почту" type="email" required>
+        <input class="popup__input" name="email" placeholder="Введите почту" type="email" required>
         <p class="popup__error-text"></p>
 
         <h3 class="popup__input-title">Пароль</h3>
-        <input name="password" class="popup__input" placeholder="Введите пароль" type="password" minlength="6" required>
+        <input class="popup__input" name="password" placeholder="Введите пароль" type="password" minlength="6" required>
         <p class="popup__error-text"></p>
 
-        <div class="popup__button-container">
-          <p class="popup__error-text popup__error-text_type_main"></p>
-          <button type="submit" class="popup__submit-button form__button" disabled>Войти</button>
-        </div>
+        <p class="popup__error-text popup__error-text_type_main"></p>
+        <button type="submit" class="popup__submit-button form__button" disabled>Войти</button>
       </form>
 
       <div class="popup__switch">
@@ -159,26 +176,25 @@
   <!-- Попап регистрации -->
   <div class="popup popup_type_signup hidden">
     <div class="popup__content">
-      <button class="popup__close-button"></button>
+      <button class="popup__close-button" title="Закрыть окно"></button>
+
       <h2 class="popup__title">Регистрация</h2>
 
-      <form name="signup" class="popup__form">
+      <form class="popup__form" name="signup">
         <h3 class="popup__input-title">Email</h3>
-        <input name="email" class="popup__input" placeholder="Введите почту" type="email" required>
+        <input class="popup__input" name="email" placeholder="Введите почту" type="email" required>
         <p class="popup__error-text"></p>
 
         <h3 class="popup__input-title">Пароль</h3>
-        <input name="password" class="popup__input" placeholder="Введите пароль" type="password" minlength="6" required>
+        <input class="popup__input" name="password" placeholder="Введите пароль" type="password" minlength="6" required>
         <p class="popup__error-text"></p>
 
         <h3 class="popup__input-title">Имя</h3>
-        <input name="name" class="popup__input" placeholder="Введите своё имя" type="text" minlength="2" maxlength="30" required>
+        <input class="popup__input" name="name" placeholder="Введите своё имя" type="text" minlength="2" maxlength="30" required>
         <p class="popup__error-text"></p>
 
-        <div class="popup__button-container">
-          <p class="popup__error-text popup__error-text_type_main"></p>
-          <button type="submit" class="popup__submit-button form__button" disabled>Зарегистрироваться</button>
-        </div>
+        <p class="popup__error-text popup__error-text_type_main"></p>
+        <button class="popup__submit-button form__button" type="submit" disabled>Зарегистрироваться</button>
       </form>
 
       <div class="popup__switch">
@@ -191,13 +207,14 @@
   <!-- Попап после регистрации -->
   <div class="popup popup_type_success hidden">
     <div class="popup__content">
-      <button class="popup__close-button"></button>
+      <button class="popup__close-button" title="Закрыть окно"></button>
+
       <h2 class="popup__title">Пользователь успешно зарегистрирован!</h2>
 
       <button class="popup__enter-button">Выполнить вход</button>
     </div>
   </div>
 
-  <script src="main/main.bce6fe84fafc12b7d7aa.js"></script>
+  <script src="main/main.acce4d7c8d4cd1fa2ea8.js"></script>
 </body>
 </html>

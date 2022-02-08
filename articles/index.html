@@ -6,30 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>NewsMachine - Сохраненные статьи</title>
-  <link rel="stylesheet" href="../articles/articles.4f23f0f885088bc468c6.css">
+  <link rel="stylesheet" href="../articles/articles.23df2fb1efbd80fbf81a.css">
   <link rel="icon" href=".././images/favicon.png" sizes="32x32" type="image/png">
 </head>
 
 <body class="body">
 
   <header class="header header_page_articles">
-    <div class="header__content header__content_background_white">
-      <a href="../" class="header__title header__title_color_black">NewsMachine</a>
+    <div class="header__content">
+      <a class="header__title" href="../">NewsMachine</a>
 
-      <nav class="header__nav header__nav_background_white">
+      <nav class="header__nav">
         <div class="header__nav-item">
-          <a href="../" class="header__link header__link_color_black">Главная</a>
+          <a class="header__link" href="../">Главная</a>
         </div>
 
         <div class="header__nav-item">
-          <p class="header__link header__link_active header__link_color_black">Сохранённые статьи</p>
-          <div class="header__selected-line header__selected-line_color_black"></div>
+          <p class="header__link header__link_active">Сохранённые статьи</p>
+          <div class="header__selected-line"></div>
         </div>
 
-        <button class="header__button header__button_color_black header__button_type_logout"></button>
+        <button class="header__button header__button_type_logout"></button>
       </nav>
 
-      <button class="header__mobile-button header__mobile-button_color_black"></button>
+      <button class="header__mobile-button"></button>
     </div>
   </header>
 
@@ -37,43 +37,57 @@
 
     <section class="info">
       <div class="info__content">
-        <p class="info__text">Сохранённые статьи</p>
-
         <h2 class="info__title"></h2>
 
         <p class="info__subtitle"></p>
+
+        <p class="info__text"></p>
       </div>
     </section>
 
     <section class="results">
       <div class="results__content results__content_page_articles hidden">
-        <div class="results__grid-container results__grid-container_page_articles">
-        </div>
+        <div class="results__grid-container results__grid-container_page_articles"></div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="footer__content">
-      <p class=footer__copyright>&copy; 2020 NewsMachine, Powered by News API</p>
+      <p class=footer__copyright>&copy; 2022 NewsMachine, Powered by News API</p>
 
       <nav class="footer__nav">
-        <a href="../" class="footer__link">Главная</a>
-        <a href="https://praktikum.yandex.ru" target="_blank" class="footer__link">Яндекс.Практикум</a>
+        <ul class="footer__links-list">
+          <li class="footer__link-item">
+            <a class="footer__link" href="./" title="На главную">Главная</a>
+          </li>
 
-        <ul class="footer__links-row">
           <li class="footer__link-item">
-            <a href="https://github.com/andrburl2" target="_blank" class="footer__icon-link"><img src=".././images/github_icon.svg" alt="Github icon" class="footer__img"></a>
+            <p class="footer__link footer__link_active">Сохраненные статьи</p>
           </li>
+
           <li class="footer__link-item">
-            <a href="https://www.facebook.com/andrey.burlakov.779" target="_blank" class="footer__icon-link"><img src=".././images/fb_icon.svg" alt="Facebook icon" class="footer__img"></a>
+            <a class="footer__icon-link" href="https://github.com/andrburl2" title="Аккаунт Github" target="_blank">
+              <svg class="footer__img" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#000" d="M10.9998.89473C5.41678.89473.89453 5.42318.89453 11c0 4.4664 2.89697 8.2505 6.91054 9.5904.50247.093.68857-.2171.68857-.4901 0-.2419-.0062-.8747-.01241-1.7183-2.81012.6079-3.40564-1.3523-3.40564-1.3523-.45905-1.1663-1.12281-1.4764-1.12281-1.4764-.91809-.6266.06824-.6142.06824-.6142 1.01115.0745 1.55084 1.0422 1.55084 1.0422.89949 1.5446 2.36348 1.098 2.94039.8374.09305-.6513.35359-1.098.63894-1.3523-2.24561-.2543-4.60288-1.1228-4.60288-4.9937 0-1.10419.39081-2.00368 1.04216-2.71086-.10546-.25434-.45285-1.28409.09925-2.67364 0 0 .84986-.27295 2.7791 1.03596.80644-.22332 1.66868-.33498 2.53098-.34119.8561.00621 1.7245.11787 2.531.34119C15.46 4.81525 16.3099 5.0882 16.3099 5.0882c.5521 1.38955.2047 2.4193.0992 2.67364.6452.70718 1.036 1.60667 1.036 2.71086 0 3.8833-2.3635 4.7332-4.6153 4.9875.3598.3102.6886.9305.6886 1.8734 0 1.3523-.0125 2.4379-.0125 2.7729 0 .273.1799.5831.6948.4839 4.0136-1.3399 6.9044-5.124 6.9044-9.5842 0-5.58302-4.5223-10.11147-10.1053-10.11147z"/>
+              </svg>
+            </a>
           </li>
+
+          <li class="footer__link-item">
+            <a  class="footer__icon-link" href="https://www.facebook.com/andrburl2" title="Аккаунт Facebook" target="_blank">
+              <svg class="footer__img" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#000" d="M18.8958 0H1.10417C.49417 0 0 .49417 0 1.10417V18.8967C0 19.5058.49417 20 1.10417 20h9.57913v-7.745H8.07667V9.23667h2.60663V7.01083c0-2.58333 1.5775-3.99 3.8825-3.99 1.1042 0 2.0525.0825 2.3292.11917v2.7l-1.5983.00083c-1.2534 0-1.4959.59584-1.4959 1.46917v1.9275H16.79l-.3892 3.0183h-2.6V20h5.0967C19.5058 20 20 19.5058 20 18.8958V1.10417C20 .49417 19.5058 0 18.8958 0z"/>
+              </svg>
+            </a>
+          </li>
+
         </ul>
       </nav>
     </div>
   </footer>
 
 
-  <script src="../articles/articles.4e871a49a647ec6d059f.js"></script>
+  <script src="../articles/articles.86a2529514f1b9f5bc55.js"></script>
 </body>
 </html>
